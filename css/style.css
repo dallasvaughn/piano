@@ -1,0 +1,144 @@
+:root {
+  --color-green-dark: #7c9473;
+  --color-green-light: #cfdac8;
+  --color-grey-dark: #777;
+  --color-grey-medium: #cdd0cb;
+  --color-grey-light: #e8eae6;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 58%; } }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 55%; } }
+  @media only screen and (max-width: 31.25em) {
+    html {
+      font-size: 40%; } }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: var(--color-grey-dark);
+  background-image: linear-gradient(to right bottom, rgba(124, 148, 115, 0.9), rgba(207, 218, 200, 0.9)), url(../img/piano.jpg);
+  background-size: cover;
+  min-height: 100vh; }
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh; }
+  @media only screen and (max-width: 62.5em) {
+    .container {
+      flex-direction: column;
+      padding-top: 4rem; } }
+
+.header {
+  color: #fff;
+  flex: 0.4;
+  margin-left: 10rem; }
+  @media only screen and (max-width: 62.5em) {
+    .header {
+      width: 60%;
+      margin-left: 0; } }
+
+.intro {
+  font-size: 6em;
+  font-weight: 900;
+  width: 85%;
+  margin-bottom: 2rem; }
+  @media only screen and (max-width: 50em) {
+    .intro {
+      font-size: 5em; } }
+  @media only screen and (max-width: 38.125em) {
+    .intro {
+      font-size: 4em; } }
+
+.description {
+  font-size: 2rem;
+  width: 85%;
+  line-height: 1.5; }
+
+.user-signup {
+  flex: 0.4;
+  margin-right: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media only screen and (max-width: 62.5em) {
+    .user-signup {
+      margin-right: 0; } }
+  .user-signup__promo {
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    width: 75%;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--color-grey-dark);
+    color: #fff; }
+    .user-signup__promo-bold {
+      font-weight: 900; }
+  .user-signup__form {
+    padding: 4rem;
+    background-color: var(--color-grey-light);
+    border-radius: 10px;
+    box-shadow: var(--shadow-dark);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .user-signup__form-input {
+      font-size: 1.5rem;
+      font-weight: 200;
+      color: var(--color-grey-dark);
+      padding: 2rem;
+      height: 5rem;
+      width: 95%;
+      margin-bottom: 2rem;
+      border-radius: 5px;
+      border: 1px solid;
+      border-color: var(--color-grey-medium);
+      transition: all 0.2s; }
+      .user-signup__form-input:focus {
+        outline: none;
+        width: 100%; }
+    .user-signup__form-button {
+      font-size: 1.6rem;
+      text-decoration: none;
+      text-align: center;
+      width: 50%;
+      border-radius: 100px;
+      margin-top: 1.5rem;
+      color: #fff;
+      background-color: var(--color-green-dark);
+      padding: 1rem; }
+      @media only screen and (max-width: 68.75em) {
+        .user-signup__form-button {
+          font-size: 1.4rem; } }
+      .user-signup__form-button:hover {
+        animation: pulsate 1s infinite; }
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); }
+  100% {
+    transform: scale(1);
+    box-shadow: none; } }

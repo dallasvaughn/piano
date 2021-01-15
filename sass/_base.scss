@@ -1,0 +1,61 @@
+:root {
+  --color-green-dark: #7c9473;
+  --color-green-light: #cfdac8;
+
+  --color-grey-dark: #777;
+  --color-grey-medium: #cdd0cb;
+  --color-grey-light: #e8eae6;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+$bp-largest: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 62.5em; // 1000px
+$bp-small: 50em; // 800px
+$bp-smallest: 38.125em; // 610px
+$bp-smallest2: 31.25em; // 500px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 58%;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 55%;
+  }
+
+  @media only screen and (max-width: $bp-smallest2) {
+    font-size: 40%;
+  }
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+
+  color: var(--color-grey-dark);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(124, 148, 115, 0.9),
+      rgba(207, 218, 200, 0.9)
+    ),
+    url(../img/piano.jpg);
+  background-size: cover;
+
+  min-height: 100vh;
+}
